@@ -1,0 +1,335 @@
+:root {
+  --primary-color: #ff0000;
+  --secondary-color: #202020;
+  --text-color: #ffffff;
+  --bg-color: #121212;
+  --hover-color: #383838;
+  --shadow-color: rgba(0, 0, 0, 0.2);
+}
+
+body {
+  font-family: "Roboto", Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: var(--secondary-color);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 5px var(--shadow-color);
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--primary-color);
+  text-shadow: 1px 1px 2px var(--shadow-color);
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  background-color: var(--bg-color);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px var(--shadow-color);
+}
+
+.search-bar input {
+  padding: 10px 15px;
+  width: 400px;
+  border: none;
+  background-color: transparent;
+  color: var(--text-color);
+  font-size: 16px;
+}
+
+.search-bar button {
+  background-color: var(--hover-color);
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  color: var(--text-color);
+  transition: background-color 0.3s;
+}
+
+.search-bar button:hover {
+  background-color: var(--primary-color);
+}
+
+.user-profile {
+  font-size: 24px;
+  cursor: pointer;
+  transition: all 0.3s;
+  background-color: var(--primary-color);
+  color: var(--bg-color);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 5px var(--shadow-color);
+}
+
+.user-profile:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px var(--shadow-color);
+}
+
+.sidebar {
+  width: 240px;
+  height: 100vh;
+  background-color: var(--secondary-color);
+  position: fixed;
+  left: 0;
+  top: 60px;
+  overflow-y: auto;
+  box-shadow: 2px 0 5px var(--shadow-color);
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar li a {
+  color: var(--text-color);
+  text-decoration: none;
+  padding: 15px 24px;
+  display: block;
+  transition: background-color 0.3s, padding-left 0.3s;
+}
+
+.sidebar li a:hover,
+.sidebar li a.active {
+  background-color: var(--hover-color);
+  padding-left: 30px;
+}
+
+main {
+  margin-left: 240px;
+  margin-top: 60px;
+  padding: 30px;
+}
+
+.categories {
+  margin-bottom: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.categories button {
+  padding: 10px 20px;
+  background-color: var(--secondary-color);
+  color: var(--text-color);
+  border: none;
+  cursor: pointer;
+  border-radius: 20px;
+  transition: all 0.3s;
+  font-weight: 500;
+}
+
+.categories button:hover,
+.categories button.active {
+  background-color: var(--primary-color);
+  transform: translateY(-2px);
+  box-shadow: 0 2px 5px var(--shadow-color);
+}
+
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+.video-item {
+  background-color: var(--secondary-color);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: all 0.3s;
+  box-shadow: 0 3px 10px var(--shadow-color);
+}
+
+.video-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px var(--shadow-color);
+}
+
+.video-item img {
+  width: 100%;
+  height: 158px;
+  object-fit: cover;
+}
+
+.video-item h3 {
+  margin: 15px 15px 10px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.video-item .video-info {
+  margin: 0 15px 15px;
+  font-size: 14px;
+  color: #aaa;
+  display: flex;
+  flex-direction: column;
+}
+
+.video-item .username {
+  font-weight: 500;
+  margin-bottom: 2px;
+}
+
+.video-item .views,
+.video-item .date {
+  font-size: 12px;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--hover-color);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-color);
+}
+
+/* Additional styles for other views */
+#subscriptions-view,
+#library-view,
+#history-view {
+  background-color: var(--secondary-color);
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 3px 10px var(--shadow-color);
+}
+
+#subscriptions-view h2,
+#library-view h2,
+#history-view h2 {
+  color: var(--primary-color);
+  margin-bottom: 15px;
+}
+
+#subscriptions-view p,
+#library-view p,
+#history-view p {
+  line-height: 1.6;
+}
+
+.top-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.filter select {
+  padding: 10px;
+  background-color: var(--secondary-color);
+  color: var(--text-color);
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.3s;
+}
+
+.filter select:hover {
+  background-color: var(--hover-color);
+}
+
+/* Watch page styles */
+.watch-page {
+  display: flex;
+  margin-top: 60px;
+  padding: 20px;
+}
+
+.video-container {
+  flex: 2;
+  margin-right: 20px;
+}
+
+.video-player {
+  width: 100%;
+  background-color: #000;
+  aspect-ratio: 16 / 9;
+  margin-bottom: 20px;
+}
+
+.video-placeholder {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.video-info {
+  display: flex;
+  justify-content: space-between;
+  color: #aaa;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.video-actions {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.video-actions button {
+  background-color: var(--secondary-color);
+  color: var(--text-color);
+  border: none;
+  padding: 10px 15px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.video-actions button:hover {
+  background-color: var(--hover-color);
+}
+
+.video-description {
+  background-color: var(--secondary-color);
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.related-videos {
+  flex: 1;
+}
+
+.related-videos h2 {
+  margin-bottom: 15px;
+}
+
+/* Make video items in the main page clickable */
+.video-link {
+  text-decoration: none;
+  color: inherit;
+}

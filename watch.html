@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Watch Video - VideoStream</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo">VideoStream</a>
+        <div class="search-bar">
+            <input type="text" placeholder="Search..." id="search-input">
+            <button class="voice-search" id="search-button">🔍</button>
+        </div>
+        <div class="user-profile">👤</div>
+    </header>
+    <nav class="sidebar">
+        <ul>
+            <li><a href="index.html" class="sidebar-option">Home</a></li>
+            <li><a href="#" class="sidebar-option">Subscriptions</a></li>
+            <li><a href="#" class="sidebar-option">Library</a></li>
+            <li><a href="#" class="sidebar-option">History</a></li>
+        </ul>
+    </nav>
+    <main class="watch-page">
+        <div class="video-container">
+            <div class="video-player">
+                <img src="https://via.placeholder.com/1280x720" alt="Video Player Placeholder" class="video-placeholder">
+            </div>
+            <h1 id="video-title">Video Title</h1>
+            <div class="video-info">
+                <span id="video-views">0 views</span>
+                <span id="video-date">Upload Date</span>
+            </div>
+            <div class="video-actions">
+                <button>👍 Like</button>
+                <button>👎 Dislike</button>
+                <button>Share</button>
+                <button>Save</button>
+            </div>
+            <div class="video-description">
+                <p id="video-description">Video description will be displayed here.</p>
+            </div>
+        </div>
+        <div class="related-videos">
+            <h2>Related Videos</h2>
+            <!-- Related videos will be dynamically added here -->
+        </div>
+    </main>
+    <script src="watch.js"></script>
+</body>
+</html>

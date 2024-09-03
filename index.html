@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VideoStream</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo">VideoStream</div>
+        <div class="search-bar">
+            <input type="text" placeholder="Search...">
+            <button class="voice-search">🔍</button>
+        </div>
+        <div class="user-profile">👤</div>
+    </header>
+    <nav class="sidebar">
+        <ul>
+            <li><a href="#" class="sidebar-option active" data-view="home">Home</a></li>
+            <li><a href="#" class="sidebar-option" data-view="subscriptions">Subscriptions</a></li>
+            <li><a href="#" class="sidebar-option" data-view="library">Library</a></li>
+            <li><a href="#" class="sidebar-option" data-view="history">History</a></li>
+        </ul>
+    </nav>
+    <main>
+        <div id="home-view">
+            <div class="top-controls">
+                <div class="categories">
+                    <button class="category-btn active" data-category="all">All</button>
+                    <button class="category-btn" data-category="music">Music</button>
+                    <button class="category-btn" data-category="gaming">Gaming</button>
+                    <button class="category-btn" data-category="movies">Movies</button>
+                    <button class="category-btn" data-category="education">Education</button>
+                    <button class="category-btn" data-category="lifestyle">Lifestyle</button>
+                    <button class="category-btn" data-category="technology">Technology</button>
+                    <button class="category-btn" data-category="travel">Travel</button>
+                </div>
+                <div class="filter">
+                    <select id="sort-filter">
+                        <option value="default">Sort by</option>
+                        <option value="views">Most viewed</option>
+                        <option value="date">Newest</option>
+                        <option value="title">Title A-Z</option>
+                    </select>
+                </div>
+            </div>
+            <div class="video-grid">
+                <!-- Video items will be dynamically added here -->
+            </div>
+        </div>
+        <div id="subscriptions-view" style="display: none;">
+            <h2>Your Subscriptions</h2>
+            <p>Content for subscriptions will be displayed here.</p>
+        </div>
+        <div id="library-view" style="display: none;">
+            <h2>Your Library</h2>
+            <p>Your saved videos and playlists will appear here.</p>
+        </div>
+        <div id="history-view" style="display: none;">
+            <h2>Watch History</h2>
+            <p>Videos you've watched will be listed here.</p>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
